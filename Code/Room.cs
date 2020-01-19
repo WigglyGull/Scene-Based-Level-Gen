@@ -1,4 +1,4 @@
-//Room.cs: Class holding each indiual rooms info
+//Room.cs: Class holding each individual rooms info
 using Godot;
 using System;
 
