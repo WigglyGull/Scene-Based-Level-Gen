@@ -8,11 +8,9 @@ public class LevelGenerator : Node2D{
     List<Vector2> takenPositions = new List<Vector2>();
     int gridSizeX, gridSizeY;
     int numberOfRooms;
-    static PackedScene roomWhiteObj = ResourceLoader.Load("res://MapSprite.tscn") as PackedScene;
     RandomNumberGenerator rng = new RandomNumberGenerator();
 
     bool setSprite;
-    bool endGen;
 
     Node2D currentLevel;
     Level levelScript;
@@ -37,7 +35,6 @@ public class LevelGenerator : Node2D{
         if(!setSprite){
             SpawnRoom(); //gets position and sets room to match
             setSprite = true;
-            endGen = false;
         }
 
         if(Input.IsActionJustPressed("ui_up") && levelScript.up){
